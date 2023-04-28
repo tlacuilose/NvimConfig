@@ -1,1 +1,1 @@
-vim.keymap.set("n", "<leader>vc", vim.cmd.Git);
+vim.keymap.set("n", "<leader>vc", ":vertical Git <cr>")
