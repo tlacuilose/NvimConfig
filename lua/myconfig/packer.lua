@@ -14,11 +14,11 @@ return require('packer').startup(function(use)
     }
 
     use({
-        'savq/melange-nvim',
-        as = 'melange',
+        "neanias/everforest-nvim",
+        -- Optional; default configuration will be used if setup isn't called.
         config = function()
-            vim.cmd('colorscheme melange')
-        end
+            require("everforest").setup()
+        end,
     })
 
     use {
@@ -50,9 +50,9 @@ return require('packer').startup(function(use)
             { 'williamboman/mason-lspconfig.nvim' }, -- Optional
 
             -- Autocompletion
-            { 'hrsh7th/nvim-cmp' }, -- Required
+            { 'hrsh7th/nvim-cmp' },     -- Required
             { 'hrsh7th/cmp-nvim-lsp' }, -- Required
-            { 'L3MON4D3/LuaSnip' }, -- Required
+            { 'L3MON4D3/LuaSnip' },     -- Required
         }
     }
 
@@ -65,11 +65,17 @@ return require('packer').startup(function(use)
 
     use {
         'windwp/nvim-ts-autotag',
-        config = function () require("nvim-ts-autotag").setup() {} end
+        config = function()
+            require('nvim-ts-autotag').setup()
+        end
     }
 
     use {
         'windwp/nvim-autopairs',
-        config = function () require("nvim-autopairs").setup() {} end
+        config = function()
+            require('nvim-autopairs').setup()
+        end
     }
+
+    use('dart-lang/dart-vim-plugin')
 end)
