@@ -78,4 +78,14 @@ return require('packer').startup(function(use)
     }
 
     use('dart-lang/dart-vim-plugin')
+
+    use {
+        'nvim-tree/nvim-tree.lua',
+        requires = {
+            'nvim-tree/nvim-web-devicons', -- optional
+        },
+    use {}
+    }
+
+    use('lewis6991/gitsigns.nvim')
 end)
