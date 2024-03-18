@@ -95,22 +95,12 @@ return require('packer').startup(function(use)
     use('nvim-lua/plenary.nvim')
 
     use{
-        '~/Development/plugins-mods/CopilotChat.nvim',
+        'CopilotC-Nvim/CopilotChat.nvim',
         branch = 'canary',
         requires = {
             { 'github/copilot.vim' },
             { 'nvim-lua/plenary.nvim' },
         },
-        config = function()
-            require('CopilotChat').setup {
-                debug = true,
-                window = {
-                    options = {
-                        relativenumber = true,
-                    },
-                },
-            }
-        end
     }
 
 end)
