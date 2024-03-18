@@ -89,4 +89,28 @@ return require('packer').startup(function(use)
     }
 
     use('lewis6991/gitsigns.nvim')
+
+    use('github/copilot.vim')
+
+    use('nvim-lua/plenary.nvim')
+
+    use{
+        '~/Development/plugins-mods/CopilotChat.nvim',
+        branch = 'canary',
+        requires = {
+            { 'github/copilot.vim' },
+            { 'nvim-lua/plenary.nvim' },
+        },
+        config = function()
+            require('CopilotChat').setup {
+                debug = true,
+                window = {
+                    options = {
+                        relativenumber = true,
+                    },
+                },
+            }
+        end
+    }
+
 end)
