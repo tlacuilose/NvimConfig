@@ -17,3 +17,7 @@ require("nvim-tree").setup({
         dotfiles = true,
     },
 })
+
+vim.cmd("highlight NvimTreeNormal guibg=NONE ctermbg=NONE")
+vim.cmd("highlight NvimTreeNormalNC guibg=NONE ctermbg=NONE")
+vim.cmd("highlight NvimTreeWinSeparator guibg=NONE ctermbg=NONE")
