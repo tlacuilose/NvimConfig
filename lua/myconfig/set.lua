@@ -30,6 +30,7 @@ vim.opt.colorcolumn = "80"
 vim.g.mapleader = " "
 
 vim.opt.formatoptions:remove { "c", "r", "o" }
+vim.cmd([[autocmd BufEnter * set fo-=o]])
 
 -- Switching netrw for nvim-tree
 -- vim.g.netrw_banner = 0
