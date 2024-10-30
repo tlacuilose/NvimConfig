@@ -23,6 +23,8 @@ return require('packer').startup(function(use)
         end,
     })
 
+    use('rose-pine/neovim')
+
     use {
         'nvim-treesitter/nvim-treesitter',
         run = ':TSUpdate'
